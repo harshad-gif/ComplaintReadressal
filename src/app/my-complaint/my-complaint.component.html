@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <table class="table">
+        <thead>
+          <tr >
+            <th scope="col">#</th>
+            <th scope="col">Complaint Id</th>
+            <th scope="col">Complaint Subject</th>
+            <th scope="col">Complaint Details</th>
+            <th scope="col">Complaint Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pr of complaintDetails let i = index">
+            <td>{{count+i}}</td>
+           <td>{{pr.complaintId}}</td>
+           <td>{{pr.complaintSubject}}</td>
+           <td>{{pr.complaintDetail}}</td>
+           <td class="" style="color:rgb(255, 0, 0);border-radius: 5px;">{{pr.complaintStatus}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

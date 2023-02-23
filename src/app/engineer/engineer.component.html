@@ -1,0 +1,37 @@
+
+
+<div class="container">
+  <h2 class="text-left mt-5">Complaint Asign By Manager</h2>
+
+  <table class="table">
+    <thead>
+      <tr class="bg-primary text-white">
+        <th scope="col">Sr.No</th>
+        <th scope="col">User</th>
+        <th scope="col">Complaint Id</th>
+        <th scope="col">Complaint Subject</th>
+        <th scope="col">Complaint Details</th>
+        <th>Complaint Status</th>
+        <th scope="col">Update Status</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-danger text-white" *ngFor="let en of aisgnComplaint let i=index">
+
+        <td>{{i+1}}</td>
+        <td>{{en.complaint.user.userName}}</td>
+        <td>{{en.complaint.complaintId}}</td>
+        <td>{{en.complaint.complaintSubject}}</td>
+        <td>{{en.complaint.complaintDetail}}</td>
+        <td>{{en.complaint.complaintStatus}}</td>
+      
+          <td>
+            <button  class="btn btn-dark" (click)="updateComplaint(en.complaint.complaintId)">Closed</button>
+          </td>
+     
+      </tr>
+      
+    </tbody>
+  </table>
+</div>

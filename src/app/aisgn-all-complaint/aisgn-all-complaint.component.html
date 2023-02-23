@@ -1,0 +1,36 @@
+
+
+
+<div class="container">
+    <h2 class="text-left mt-5">All Asign Complaint</h2>
+  
+    <table class="table">
+      <thead>
+        <tr class="bg-primary text-white">
+          <th scope="col">Sr.No</th>
+          <th scope="col">Compaint Id</th>
+          <th scope="col">Complaint Detail</th>
+          <th scope="col">Asign Engineer</th>
+          <th scope="col">Complaint Status</th>
+          
+  
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-danger text-white" *ngFor="let en of aisgnComplaint let i=index">
+  
+          <td>{{i+1}}</td>
+          <td>{{en.complaint.complaintId}}</td>
+          <td>{{en.complaint.complaintDetail}} </td>
+          <td>{{en.user.userFirstName}} {{en.user.userLastName}}</td>
+          <td>{{en.complaint.complaintStatus}}</td>
+      
+        
+            
+       
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  

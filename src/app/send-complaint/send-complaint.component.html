@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <form #compForm="ngForm" (ngSubmit)="sendComplaint(compForm)">
+        <div class="card">
+            <h1 class="display-5 text-center  mt-5" style="color: lightpink;">Register Your Complaint</h1>
+            <div class="form-group">
+                <label for="">Complaint Subject</label>
+                <select class="form-control" [(ngModel)]=" compDetails.complaintSubject" name="complaintSubject" id="">
+                    <option value="Having Attendance marking issue with live sessions?">Having Attendance marking issue with live sessions?</option>
+                    <option value="How do I unlock and download my master's program certificate?">How do I unlock and download my master's program certificate?</option>
+                    <option value="How can I download my invoice/bill for the course payment?">How can I download my invoice/bill for the course payment?</option>
+                    <option value="How do I unlock and download my Post graduate program certificate?">How do I unlock and download my Post graduate program certificate?</option>
+                </select>
+            </div>
+             
+            <div class="form-group">
+                <label for="">Complaint Details</label>
+                <textarea class="form-control" [(ngModel)]=" compDetails.complaintDetail" name="complaintDetail" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <button class="btn btn-success" type="submit">Send Complaint</button>
+        </div>
+
+       
+
+    </form>
+</div>

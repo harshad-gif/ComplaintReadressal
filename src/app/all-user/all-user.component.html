@@ -1,0 +1,36 @@
+
+
+
+<div class="container">
+    <h2 class="text-left mt-5">All User</h2>
+  
+    <table class="table">
+      <thead>
+        <tr class="bg-primary text-white">
+          <th scope="col">Sr.No</th>
+          <th scope="col">Username</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">User Role</th>
+          
+  
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-danger text-white" *ngFor="let en of aisgnComplaint let i=index">
+  
+          <td>{{i+1}}</td>
+          <td>{{en.userName}}</td>
+          <td>{{en.userFirstName}}</td>
+          <td>{{en.userLastName}}</td>
+          <td>{{en.role[0].roleName}}</td>
+      
+        
+            
+       
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  

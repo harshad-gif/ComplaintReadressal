@@ -1,0 +1,25 @@
+
+
+<div class="container mt-5">
+    <div class="card  pt-3" style="background:white;border: none;align-items: center;">
+        <p class="h3  rounded font-weight-bold" >All Complaints</p> 
+        <div class="row">
+            <div class="col-lg-6 mb-4 mt-5" *ngFor="let pr of complaintDetails ">
+                <div class="card shadow "style="">
+                    <div class="card-body">
+                        <h3 style="color: rgb(73, 19, 237);">Complaint ID:-{{pr.complaintId}}</h3>
+                        
+                         <p class="card-title" style="flex: 0 0 auto;font-size:large;">Complaint By - {{pr.user.userFirstName}} {{pr.user.userLastName}}</p>
+                         <p style="font-size:large;">Complaint Subject - {{pr.complaintSubject}}</p>
+                         <p  style="font-size:large;">Complaint Detail - {{pr.complaintDetail}}</p>
+                    </div>
+                    
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+
+
+
+
